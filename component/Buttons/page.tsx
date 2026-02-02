@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, ReactNode } from "react";
 import { motion, MotionProps } from "motion/react";
 
 interface ButtonProps 
@@ -13,6 +13,7 @@ interface ButtonProps
         initial?: MotionProps["initial"];
         animate?: MotionProps["animate"];
         transition?: MotionProps["transition"];
+        children: ReactNode;
     }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,7 +25,8 @@ const Button: React.FC<ButtonProps> = ({
     whileInView,
     initial,
     animate,
-    transition
+    transition,
+    children
 }) => {
     return (
         <motion.button
@@ -37,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
             animate={animate}
             transition={transition}
         >
+            {children}
             {text}
         </motion.button>
     );
