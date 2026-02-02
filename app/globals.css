@@ -16,10 +16,10 @@
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #171717;
-    --foreground: #ededed;
+    --background: #fff;
+    --foreground: #171717;
   }
 }
 
