@@ -17,9 +17,9 @@ const Container: React.FC<ContainerProps> =
        action
     }) => {
     return (
-        <div className={`flex flex-col shadow-md overflow-hidden rounded-xl ${className}`}>
+        <div className={`group/container flex flex-col shadow-md overflow-hidden rounded-xl ${className}`}>
             {/* HEADER */}
-            <div className="flex justify-between items-center bg-[#EBEBEB] py-2 px-5">
+            <div className="flex justify-between items-center group-hover/container:bg-[#EBEBEB] py-2 px-5 transition-colors duration-300">
                 <div className="flex items-center gap-2">
                     {icon}
                     <h1 className="font-bold font-inter">{title}</h1>

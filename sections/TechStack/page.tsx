@@ -1,6 +1,5 @@
 import Container from "@/component/Containers/page";
-import React from "react";
-import { Layers, ChevronRight } from "lucide-react";
+import { Layers } from "lucide-react";
 import ViewBtn from "@/component/Buttons/view";
 import { motion } from "motion/react";
 

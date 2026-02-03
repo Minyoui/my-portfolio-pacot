@@ -6,11 +6,13 @@ import FixedLinks from "@/component/SocialLinks/page";
 import About from "@/sections/About/page";
 import Experience from "@/sections/Experience/page";
 import TechStack from "@/sections/TechStack/page";
+import Beyond from "@/sections/Beyond/page";
+import Projects from "@/sections/Projects/page";
 
 export default function Home() {
   return (
-    <main className="space-y-5">
-      <FixedLinks />
+    <main className="space-y-5 mb-20">
+      {/* <FixedLinks /> */}
       <Header className="font-inter mx-auto max-w-5xl"/>
       <section 
         className="mx-auto max-w-5xl grid grid-cols-3 gap-5"
@@ -18,6 +20,8 @@ export default function Home() {
         <About className="col-span-2"/>
         <Experience className="row-span-2"/>
         <TechStack className="col-span-2"/>
+        <Beyond />
+        <Projects className="col-span-2"/>
       </section>
     </main>
   );

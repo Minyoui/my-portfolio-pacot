@@ -1,5 +1,4 @@
 import Container from "@/component/Containers/page";
-import React, { ReactNode } from "react";
 import { Info } from "lucide-react";
 
 interface AboutProps {

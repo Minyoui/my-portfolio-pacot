@@ -1,5 +1,4 @@
 import Container from "@/component/Containers/page";
-import React, { ReactNode } from "react";
 import { BriefcaseBusiness } from "lucide-react";
 
 interface ExperienceProps {
@@ -43,7 +42,7 @@ const Experience: React.FC<ExperienceProps> = ({ className }) => {
                 {ExperienceData.map(( exp ) => (
                     <li 
                         key={exp.id}
-                        className="mb-2 relative pl-5 group"
+                        className="group/exp mb-2 relative pl-5"
                     >
                         <div 
                             className={`
@@ -57,7 +56,7 @@ const Experience: React.FC<ExperienceProps> = ({ className }) => {
                                 top-1/4 
                                 rounded-[100%] 
                                 ${exp.present? "bg-black" : "bg-white"}
-                                group-hover:bg-black
+                                group-hover/exp:bg-black
                                 transition-colors
                                 duration-200
                             `}

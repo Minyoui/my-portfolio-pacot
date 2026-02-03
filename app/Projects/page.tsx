@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const TechStack = () => {
+const Projects = () => {
     return (
         <main className="mx-auto max-w-5xl">
             <Link href="/" className="cursor-pointer">
@@ -10,4 +10,4 @@ const TechStack = () => {
     );
 };
 
-export default TechStack;
+export default Projects;
