@@ -14,7 +14,7 @@ import Misc from "@/sections/Misc/page";
 export default function Home() {
   return (
     <main className="space-y-5 mb-20">
-      <AnimatedThemeToggler />
+      <AnimatedThemeToggler className="fixed right-20 top-1/2"/>
       {/* <FixedLinks /> */}
       <Header className="font-inter mx-auto max-w-5xl"/>
       <section 

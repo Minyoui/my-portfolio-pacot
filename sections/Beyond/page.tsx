@@ -12,7 +12,7 @@ const Beyond: React.FC<BeyondProps> = ({ className }) => {
             icon={<Lightbulb className="w-5 h-5"/>}
             className={className}
         >
-            <p>Hello World</p>
+            <p className="font-inter">Lorem ipsum dolor sit amet consecterur</p>
         </Container>
     );
 };
