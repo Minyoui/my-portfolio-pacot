@@ -16,9 +16,9 @@ export default function Home() {
     <main className="space-y-5 mb-20">
       <AnimatedThemeToggler className="fixed right-20 top-1/2"/>
       {/* <FixedLinks /> */}
-      <Header className="font-inter mx-auto max-w-5xl"/>
+      <Header className="font-inter mx-auto max-w-4xl"/>
       <section 
-        className="mx-auto max-w-5xl grid grid-cols-3 gap-3"
+        className="mx-auto max-w-4xl grid grid-cols-3 gap-3"
       >
         <About className="col-span-2"/>
         <Experience className="row-span-2"/>

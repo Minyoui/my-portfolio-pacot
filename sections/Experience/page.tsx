@@ -77,7 +77,7 @@ const Experience: React.FC<ExperienceProps> = ({ className }) => {
                             <p className="font-semibold">{exp.role}</p>
                             <p className="text-xs flex justify-between">
                                 {exp.description}
-                                <span className="font-mono shadow-sm rounded-2xl px-2">
+                                <span className="font-mono shadow-sm rounded-2xl px-2 h-fit">
                                     {exp.year}
                                 </span>
                             </p>
