@@ -1,8 +1,8 @@
 import Container from "@/component/Containers/page";
 import React from "react";
 import { Layers, ChevronRight } from "lucide-react";
-import Button from "@/component/Buttons/page";
-import Link from "next/link";
+import ViewBtn from "@/component/Buttons/view";
+import { motion } from "motion/react";
 
 interface TechStackProps {
     className?: string;
@@ -10,13 +10,17 @@ interface TechStackProps {
 
 const StackData = {
     Frontend: [
+        "React",
+        "Next",
         "HTML5",
+        "SCSS",
         "Tailwind"
     ],
 
     Backend: [
         "Firebase",
-        "MongoDB"
+        "MongoDB",
+        "Node.js"
     ],
 
     DevTools: [
@@ -32,22 +36,19 @@ const TechStack: React.FC<TechStackProps> = ({ className }) => {
             title="Tech Stack"
             icon={<Layers className="w-5 h-5"/>}
             action={
-                <Link 
-                    className="font-inter text-sm flex cursor-pointer"
-                    href=""
-                    target="_blank"
-                >
-                    View All <ChevronRight className="w-5 h-5"/>
-                </Link>
+                <ViewBtn 
+                    className="font-inter"
+                    href="/TechStack"
+                />
             }
             className={className}
         >
             {Object.entries(StackData).map(([category, items]) => (
                 <div key={category}>
                     <h3 className="mb-2 font-semibold font-inter">{category}</h3>
-                    <ul className="space-x-3 flex">
+                    <ul className="space-x-3 flex mb-2">
                         {items.map((tech) => (
-                            <li key={tech} className="font-mono text-sm">
+                            <li key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
                                 {tech}
                             </li>
                         ))}
