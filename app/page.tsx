@@ -13,12 +13,12 @@ import Misc from "@/sections/Misc/page";
 
 export default function Home() {
   return (
-    <main className="space-y-5 mb-20">
-      <AnimatedThemeToggler className="fixed right-20 top-1/2"/>
+    <main className="space-y-5 mb-20 px-15">
+      <AnimatedThemeToggler className="fixed right-20 top-1/2 z-50 max-xl:right-5 transition-all duration-300"/>
       {/* <FixedLinks /> */}
       <Header className="font-inter mx-auto max-w-4xl"/>
       <section 
-        className="mx-auto max-w-4xl grid grid-cols-3 gap-3"
+        className="mx-auto max-w-4xl grid grid-cols-3 gap-3 max-lg:flex max-lg:flex-col"
       >
         <About className="col-span-2"/>
         <Experience className="row-span-2"/>

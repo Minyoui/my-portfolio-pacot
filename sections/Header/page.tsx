@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import Button from "@/component/Buttons/page";
 import Image from "next/image";
 import { MapPin, ArrowDownToLine, Mail, BookOpen, ChevronRight } from "lucide-react";
@@ -11,30 +11,31 @@ interface HeaderProps {
 };
 
 const Header: React.FC<HeaderProps> = ({ className }) => {
+    const [state, setState] = useState<"default" | "hover" | "active">("default");
+
+    const imageMap = {
+        default: "/profile.png",
+        hover: "/hover-profile.png",
+        active: "/active-profile.png",
+    };
+    
     return (
-        <header className={`w-full flex space-x-3 pt-10 ${className}`}>
+        <header className={`relative w-full flex space-x-3 pt-10 ${className}`}>
             <motion.div 
-                className="group/profile relative h-auto w-40"
+                className="relative h-auto min-w-35"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 1 }}
+                onHoverStart={() => setState("hover")}
+                onHoverEnd={() => setState("default")}
+                onTapStart={() => setState("active")}
+                onTapCancel={() => setState("default")}
+                onTap={() => setState("hover")}
             >
                 <Image 
-                    src="/profile.png"
+                    src={imageMap[state]}
                     fill
                     alt="profile picture"
-                    className="rounded-2xl group-hover/profile:hidden"
-                />
-                <Image 
-                    src="/hover-profile.png"
-                    fill
-                    alt="profile picture"
-                    className="rounded-2xl hidden group-hover/profile:block group-active/profile:hidden"
-                />
-                <Image 
-                    src="/active-profile.png"
-                    fill
-                    alt="profile picture"
-                    className="rounded-2xl hidden group-active/profile:block"
+                    className="rounded-2xl"
                 />
             </motion.div>
             <div className="flex flex-col pt-5 space-y-5 w-full items-start">
