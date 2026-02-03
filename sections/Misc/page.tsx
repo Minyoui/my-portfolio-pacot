@@ -45,7 +45,7 @@ const Misc: React.FC<MiscProps> = ({ className }) => {
         >
             <div className="flex gap-3 font-inter">
                 <div className="shadow-md flex-2">
-                    <h1>Social Links</h1>
+                    
                 </div>
 
                 <div className="flex-1 flex flex-col gap-3">

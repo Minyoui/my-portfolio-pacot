@@ -10,6 +10,7 @@ import TechStack from "@/sections/TechStack/page";
 import Beyond from "@/sections/Beyond/page";
 import Projects from "@/sections/Projects/page";
 import Misc from "@/sections/Misc/page";
+import Gallery from "@/sections/Gallery/page";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Beyond />
         <Projects className="col-span-2"/>
         <Misc className="col-span-3"/>
+        <Gallery className="col-span-3"/>
       </section>
       <footer className="mt-20">
         <p className="text-center font-inter text-sm">All rights reserved © Evane Pacot 2026</p>
