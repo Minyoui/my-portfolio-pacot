@@ -1,3 +1,5 @@
+"use client"
+
 import Container from "@/component/Containers/page";
 import { Layers } from "lucide-react";
 import ViewBtn from "@/component/Buttons/view";
@@ -47,9 +49,9 @@ const TechStack: React.FC<TechStackProps> = ({ className }) => {
                     <h3 className="mb-2 font-semibold font-inter">{category}</h3>
                     <ul className="space-x-3 flex mb-2">
                         {items.map((tech) => (
-                            <li key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
+                            <motion.li whileHover={{ y:-3 }} key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
                                 {tech}
-                            </li>
+                            </motion.li>
                         ))}
                     </ul>
                 </div>

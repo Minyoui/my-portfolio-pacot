@@ -16,15 +16,8 @@
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #fff;
-    --foreground: #171717;
-  }
-}
-
 .dark {
-  --background: #171717;
+  --background: #000;
   --foreground: rgba(255,255,255);
 }
 

@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                         </p>
                     </div>
                     <motion.p 
-                        className="py-2 px-4 rounded-4xl text-sm bg-black text-white"
+                        className="py-2 px-4 rounded-4xl text-sm bg-black text-white dark:bg-white dark:text-black"
                         whileHover={{ y:-3 }}
                     >
                         Web Developer / Designer
@@ -39,20 +39,23 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
 
                 {/* MENU BUTTONS */}
                 <div className="flex items-center space-x-2">
-                    <Button
-                        text="Download Resume"
-                        className="flex items-center bg-black text-white p-2 text-sm rounded-xl gap-2 shadow-md"
+                    <motion.a
+                        className="flex items-center bg-black text-white dark:bg-white dark:text-black p-2 text-sm rounded-lg gap-2 shadow-md"
                         whileHover={{ y:-2 }}
+                        href="/Pacot Resume.pdf"
+                        download
                     >
                         <ArrowDownToLine className="w-5 h-5" />
-                    </Button>
-                    <Button
-                        text="Send Email"
-                        className="flex items-center text-black p-2 text-sm rounded-xl gap-2 shadow-md"
+                        Download Resume
+                    </motion.a>
+                    <motion.a
+                        className="cursor-pointer flex items-center text-black dark:text-white p-2 text-sm rounded-lg gap-2 shadow-md"
                         whileHover={{ y:-2 }}
+                        href="mailto:evanepacot2002@gmail.com"
                     >
                         <Mail className="w-5 h-5" />
-                    </Button>
+                        Send Email
+                    </motion.a>
                 </div>
             </div>
         </header>
