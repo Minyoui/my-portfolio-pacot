@@ -46,7 +46,7 @@ const TechStack: React.FC<TechStackProps> = ({ className }) => {
             {Object.entries(StackData).map(([category, items]) => (
                 <div key={category}>
                     <h3 className="mb-2 font-semibold font-inter">{category}</h3>
-                    <ul className="space-x-3 flex mb-2">
+                    <ul className="space-x-3 flex mb-2 flex-wrap">
                         {items.map((item) => (
                             // <motion.li whileHover={{ y:-3 }} key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
                             //     {tech}

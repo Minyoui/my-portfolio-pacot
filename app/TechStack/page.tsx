@@ -6,39 +6,59 @@ import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import { motion } from "motion/react";
 import AnimatedList from "@/component/AnimatedList";
 
+// const StackData = {
+//     Frontend: [
+//         "JavaScript",
+//         "TypeScript",
+//         "React",
+//         "Next.js",
+//         "Tailwind CSS",
+//         "SCSS",
+//         "CSS3",
+//         "HTML5",
+//         "Vite",
+//         "Motion"
+//     ],
+
+//     Backend: [
+//         "Firebase",
+//         "MongoDB",
+//         "Node.js"
+//     ],
+
+//     Developer_Tools: [
+//         "Git",
+//         "Github",
+//         "VS Code",
+//         "Discord"
+//     ],
+
+//     Multimedia: [
+//         "Adobe Photoshop",
+//         "Adobe Premier Pro",
+//         "CapCut",
+//         "Figma",
+//         "Canva",
+//     ]
+// };
+
 const StackData = {
     Frontend: [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "SCSS",
-        "CSS3",
-        "HTML5",
-        "Vite",
-        "Motion"
+        {  tech:"JavaScript", icon:"/icons/JavaScript.svg" },
+        {  tech:"TypeScript", icon:"/icons/TypeScript.png" },
+        {  tech:"React", icon:"/icons/React.svg" },
+        {  tech:"Next.js", icon:"/icons/next-js.svg" },
     ],
 
     Backend: [
-        "Firebase",
-        "MongoDB",
-        "Node.js"
+        {  tech:"Firebase", icon:"/icons/Firebase.svg" },
+        {  tech:"MongoDB", icon:"/icons/MongoDB.png" },
     ],
 
-    Developer_Tools: [
-        "Git",
-        "Github",
-        "VS Code",
-        "Discord"
-    ],
-
-    Multimedia: [
-        "Adobe Photoshop",
-        "Adobe Premier Pro",
-        "CapCut",
-        "Figma",
-        "Canva",
+    DevTools: [
+        {  tech:"Git", icon:"/icons/Git.png" },
+        {  tech:"Github", icon:"/icons/GitHub.svg" },
+        {  tech:"VS Code", icon:"/icons/Visual Studio.svg" },
     ]
 };
 
@@ -59,14 +79,20 @@ const TechStack = () => {
                         {category}
                     </h2>
                     <ul className="flex flex-wrap gap-3 font-mono">
-                        {items.map((tech) => (
-                            <motion.li 
-                                className="px-3 py-2 border-2 rounded-md text-sm" 
-                                key={tech}
-                                whileHover={{ y:-3 }}
-                            >
-                                {tech}
-                            </motion.li>
+                        {items.map((item) => (
+                            // <motion.li 
+                            //     className="px-3 py-2 border-2 rounded-md text-sm" 
+                            //     key={tech}
+                            //     whileHover={{ y:-3 }}
+                            // >
+                            //     {tech}
+                            // </motion.li>
+                            <AnimatedList 
+                                className="font-mono cursor-default border-2 rounded-md"
+                                key={item.tech}
+                                text={item.tech}
+                                icon={item.icon}
+                            />
                         ))}
                     </ul>
                 </div>
