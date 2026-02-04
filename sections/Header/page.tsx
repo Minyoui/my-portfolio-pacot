@@ -20,9 +20,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     };
     
     return (
-        <header className={`relative w-full flex space-x-3 pt-10 ${className}`}>
+        <header className={`relative w-full flex space-x-3 pt-10 max-md:items-center ${className}`}>
             <motion.div 
-                className="relative h-auto min-w-35"
+                className="relative md:max-h-35 min-w-35 max-md:h-50 max-md:w-50"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 1 }}
                 onHoverStart={() => setState("hover")}
@@ -38,10 +38,10 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                     className="rounded-2xl"
                 />
             </motion.div>
-            <div className="flex flex-col pt-5 space-y-5 w-full items-start">
-                <div className="grid grid-cols-2 items-center">
+            <div className="flex flex-col pt-5 space-y-5 w-full items-start max-md:items-center">
+                <div className="grid grid-cols-2 items-center max-md:grid-cols-1 max-md:gap-3">
                     <div className="flex-col">
-                        <h1 className="font-semibold text-3xl">Evane Pacot</h1>
+                        <h1 className="font-semibold text-3xl max-md:text-center">Evane Pacot</h1>
                         <p className="flex text-sm items-center mt-1">
                             <MapPin className="w-5 h-5 mr-1"/> Imus Cavite, Philippines
                         </p>
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                 </div>
 
                 {/* MENU BUTTONS */}
-                <div className="flex items-center space-x-2 w-full">
+                <div className="flex flex-col md:flex-row md:items-center md:space-x-2 max-md:space-y-2 w-full">
                     <motion.a
                         className="flex items-center bg-black text-white dark:bg-white dark:text-black p-2 text-sm rounded-lg gap-2 shadow-md"
                         whileHover={{ y:-2 }}

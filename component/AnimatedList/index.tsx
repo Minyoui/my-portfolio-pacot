@@ -45,7 +45,7 @@ const AnimatedList: React.FC<AnimatedListProps> = ({
             src={icon}
             alt={text}
             fill
-            className="object-contain drop-shadow-lg"
+            className="object-contain drop-shadow-sm"
           />
         </div>
       </div>

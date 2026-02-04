@@ -16,7 +16,7 @@ const Misc: React.FC<MiscProps> = ({ className }) => {
         <Container
             className={className}
         >
-            <div className="flex gap-3 font-inter">
+            <div className="flex md:flex-row flex-col gap-3 font-inter">
                 <div className="shadow-md flex-2">
                     <div className="flex gap-1 items-center mb-2">
                         <Trophy className="h-4.5 w-4.5"/>
