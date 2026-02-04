@@ -26,8 +26,8 @@ export default function Home() {
         <TechStack className="col-span-2"/>
         <Beyond />
         <Projects className="col-span-2"/>
-        <Misc className="col-span-3"/>
         <Gallery className="col-span-3"/>
+        <Misc className="col-span-3"/>
       </section>
       <footer className="mt-20">
         <p className="text-center font-inter text-sm">All rights reserved © Evane Pacot 2026</p>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import { motion } from "motion/react";
+import AnimatedList from "@/component/AnimatedList";
 
 const StackData = {
     Frontend: [

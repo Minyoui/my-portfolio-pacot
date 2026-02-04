@@ -4,6 +4,7 @@ import Container from "@/component/Containers/page";
 import { Layers } from "lucide-react";
 import ViewBtn from "@/component/Buttons/view";
 import { motion } from "motion/react";
+import AnimatedList from "@/component/AnimatedList";
 
 interface TechStackProps {
     className?: string;
@@ -11,23 +12,21 @@ interface TechStackProps {
 
 const StackData = {
     Frontend: [
-        "React",
-        "Next",
-        "HTML5",
-        "SCSS",
-        "Tailwind"
+        {  tech:"JavaScript", icon:"/icons/JavaScript.svg" },
+        {  tech:"TypeScript", icon:"/icons/TypeScript.png" },
+        {  tech:"React", icon:"/icons/React.svg" },
+        {  tech:"Next.js", icon:"/icons/next-js.svg" },
     ],
 
     Backend: [
-        "Firebase",
-        "MongoDB",
-        "Node.js"
+        {  tech:"Firebase", icon:"/icons/Firebase.svg" },
+        {  tech:"MongoDB", icon:"/icons/MongoDB.png" },
     ],
 
     DevTools: [
-        "Git",
-        "Github",
-        "VS Code"
+        {  tech:"Git", icon:"/icons/Git.png" },
+        {  tech:"Github", icon:"/icons/GitHub.svg" },
+        {  tech:"VS Code", icon:"/icons/Visual Studio.svg" },
     ]
 };
 
@@ -48,10 +47,16 @@ const TechStack: React.FC<TechStackProps> = ({ className }) => {
                 <div key={category}>
                     <h3 className="mb-2 font-semibold font-inter">{category}</h3>
                     <ul className="space-x-3 flex mb-2">
-                        {items.map((tech) => (
-                            <motion.li whileHover={{ y:-3 }} key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
-                                {tech}
-                            </motion.li>
+                        {items.map((item) => (
+                            // <motion.li whileHover={{ y:-3 }} key={tech} className="font-mono text-sm px-2 py-1 rounded-sm shadow-md">
+                            //     {tech}
+                            // </motion.li>
+                            <AnimatedList 
+                                className="font-mono cursor-default"
+                                key={item.tech}
+                                text={item.tech}
+                                icon={item.icon}
+                            />
                         ))}
                     </ul>
                 </div>
