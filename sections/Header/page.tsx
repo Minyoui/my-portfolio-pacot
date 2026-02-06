@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                     <motion.a
                         className="flex items-center justify-between p-2 text-sm rounded-lg shadow-md flex-1"
                         whileHover={{ y:-2 }}
-                        href=""
+                        href="https://pct-blog-orcin.vercel.app"
                         target="_blank"
                     >
                         <span className="flex gap-2">
