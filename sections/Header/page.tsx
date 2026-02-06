@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import Button from "@/component/Buttons/page";
 import Image from "next/image";
 import { MapPin, ArrowDownToLine, Mail, BookOpen, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
@@ -14,9 +13,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     const [state, setState] = useState<"default" | "hover" | "active">("default");
 
     const imageMap = {
-        default: "/profile.png",
-        hover: "/hover-profile.png",
-        active: "/active-profile.png",
+        default:"/profile.png",
+        hover:"/hover-profile.png",
+        active:"/active-profile.png",
     };
     
     return (
