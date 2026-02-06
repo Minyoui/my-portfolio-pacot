@@ -13,10 +13,10 @@ const Projects: React.FC<ProjectProps> = ({ className }) => {
     const ProjectData = [
         {
             id:1,
-            title:"Personal Portfolio",
-            description:"Lorem Ipsum dolor sit amet",
-            link:"https://pct-portfolio.vercel.app",
-            tag:"pct-portfolio.vercel.app"
+            title:"Pacot Blogs",
+            description:"Personally developed blog website",
+            link:"https://pct-blog-orcin.vercel.app",
+            tag:"pct-blog-orcin.vercel.app"
         },
         {
             id:2,
