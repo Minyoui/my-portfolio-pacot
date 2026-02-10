@@ -22,7 +22,7 @@ const Misc: React.FC<MiscProps> = ({ className }) => {
                         <Trophy className="h-4.5 w-4.5"/>
                         <h3 className="font-semibold">Personal Goal</h3>
                     </div>
-                    <p className="text-sm">Hello World</p>
+                    <p className="text-sm">To continue learning and adopting to evolving technologies and improve physical and mental health.</p>
                 </div>
                 <SocialLink className="flex-1"/>
                 <Contact 

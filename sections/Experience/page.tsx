@@ -13,7 +13,6 @@ const ExperienceData = [
         year:2025,
         present:true
     },
-
     {
         id:2,
         role:"BS in Computer Engineering",
@@ -21,9 +20,16 @@ const ExperienceData = [
         year:2025,
         present:false
     },
-
     {
         id:3,
+        role:"Product Engineer",
+        description:"ParSafe: A Smart Parcel Receiver (Thesis)",
+        year:2025,
+        present:false
+    },
+    
+    {
+        id:4,
         role:"Web Developer",
         description:"Internship (Blissful Bali Spa)",
         year:2025,
@@ -32,7 +38,7 @@ const ExperienceData = [
 
 
     {
-        id:4,
+        id:5,
         role:"Hello World!",
         description:"Wrote my first line of code",
         year:2018,

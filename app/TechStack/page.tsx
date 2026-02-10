@@ -48,17 +48,27 @@ const StackData = {
         {  tech:"TypeScript", icon:"/icons/TypeScript.png" },
         {  tech:"React", icon:"/icons/React.svg" },
         {  tech:"Next.js", icon:"/icons/next-js.svg" },
+        {  tech:"SCSS", icon:"" },
+        {  tech:"Vite", icon:"" },
+        {  tech:"Motion", icon:"" },
+        {  tech:"Tailwind", icon:"" },
     ],
 
     Backend: [
         {  tech:"Firebase", icon:"/icons/Firebase.svg" },
         {  tech:"MongoDB", icon:"/icons/MongoDB.png" },
+        {  tech:"Node.js", icon:"" },
     ],
 
     DevTools: [
         {  tech:"Git", icon:"/icons/Git.png" },
         {  tech:"Github", icon:"/icons/GitHub.svg" },
         {  tech:"VS Code", icon:"/icons/Visual Studio.svg" },
+        {  tech:"Adobe Photoshop", icon:"" },
+        {  tech:"Adobe Premiere Pro", icon:"" },
+        {  tech:"CapCut", icon:"" },
+        {  tech:"Figma", icon:"" },
+        {  tech:"Canva", icon:"" },
     ]
 };
 

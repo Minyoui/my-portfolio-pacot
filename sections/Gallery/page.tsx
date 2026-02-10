@@ -6,14 +6,17 @@ import { useRef, useState } from "react";
 import { motion } from "motion/react";
 
 const Images = [
-  "/profile.png",
-  "/hover-profile.png",
-  "/active-profile.png",
-  "/profile.png",
-  "/profile.png",
-  "/profile.png",
-  "/profile.png",
-  "/profile.png",
+  "/gallery/photo-1.jfif",
+  "/gallery/photo-2.jfif",
+  "/gallery/photo-3.jfif",
+  "/gallery/photo-4.jfif",
+  "/gallery/photo-5.jfif",
+  "/gallery/photo-6.jfif",
+  "/gallery/photo-7.jfif",
+  "/gallery/photo-8.jfif",
+  "/gallery/photo-9.jfif",
+  "/gallery/photo-10.jpg",
+  "/gallery/photo-11.png",
 ];
 
 const Gallery = ({ className }: { className?: string }) => {
