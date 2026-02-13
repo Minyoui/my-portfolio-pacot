@@ -6,42 +6,6 @@ import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import { motion } from "motion/react";
 import AnimatedList from "@/component/AnimatedList";
 
-// const StackData = {
-//     Frontend: [
-//         "JavaScript",
-//         "TypeScript",
-//         "React",
-//         "Next.js",
-//         "Tailwind CSS",
-//         "SCSS",
-//         "CSS3",
-//         "HTML5",
-//         "Vite",
-//         "Motion"
-//     ],
-
-//     Backend: [
-//         "Firebase",
-//         "MongoDB",
-//         "Node.js"
-//     ],
-
-//     Developer_Tools: [
-//         "Git",
-//         "Github",
-//         "VS Code",
-//         "Discord"
-//     ],
-
-//     Multimedia: [
-//         "Adobe Photoshop",
-//         "Adobe Premier Pro",
-//         "CapCut",
-//         "Figma",
-//         "Canva",
-//     ]
-// };
-
 const StackData = {
     Frontend: [
         {  tech:"JavaScript", icon:"/icons/JavaScript.svg" },
