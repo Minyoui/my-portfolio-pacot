@@ -5,6 +5,7 @@ import { MoveLeft } from "lucide-react";
 import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import { motion } from "motion/react";
 import AnimatedList from "@/component/AnimatedList";
+import Footer from "@/component/Footer";
 
 const StackData = {
     Frontend: [
@@ -71,9 +72,7 @@ const TechStack = () => {
                     </ul>
                 </div>
             ))}
-            <footer className="pt-10 border-t">
-                <p className="text-center font-inter text-sm">All rights reserved © Evane Pacot 2026</p>
-            </footer>
+            <Footer className="pt-10 border-t"/>
         </main>
     );
 };

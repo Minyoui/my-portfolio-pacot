@@ -11,6 +11,7 @@ import Beyond from "@/sections/Beyond/page";
 import Projects from "@/sections/Projects/page";
 import Misc from "@/sections/Misc/page";
 import Gallery from "@/sections/Gallery/page";
+import Footer from "@/component/Footer";
 
 export default function Home() {
   return (
@@ -31,9 +32,7 @@ export default function Home() {
         <Gallery className="col-span-3"/>
         <Misc className="col-span-3"/>
       </section>
-      <footer className="mt-20">
-        <p className="text-center font-inter text-sm">All rights reserved © Evane Pacot 2026</p>
-      </footer>
+      <Footer className="mt-20"/>
     </main>
   );
 }
