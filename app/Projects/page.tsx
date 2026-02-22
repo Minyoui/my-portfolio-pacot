@@ -133,7 +133,7 @@ const Projects = () => {
                             <div className="dark:bg-black bg-gray-200 w-fit p-2 rounded-sm">
                                 <p className="font-mono text-xs">{project.url}</p>
                             </div>
-                            <p className="text-sm">{project.description}</p>
+                            <p className="text-sm hyphens-auto text-justify">{project.description}</p>
                             <div 
                                 className="mt-3 transition-all duration-300 relative overflow-hidden h-0 group-hover:h-20 rounded-2xl">
                                 <LogoLoop

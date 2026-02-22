@@ -13,7 +13,7 @@ const ViewBtn: React.FC<ViewProps> = ({ className, href }) => {
             href={href}
             className={`text-sm flex cursor-pointer ${className}`}
         >
-            View All
+            <span className="sm:block hidden">View All</span>
             <ChevronRight className="w-5 h-5"/>
         </Link>
     );

@@ -17,7 +17,7 @@ const Misc: React.FC<MiscProps> = ({ className }) => {
             className={className}
         >
             <div className="flex md:flex-row flex-col gap-3 font-inter">
-                <div className="shadow-md flex-2">
+                <div className="shadow-md flex-2 p-2 rounded-lg">
                     <div className="flex gap-1 items-center mb-2">
                         <Trophy className="h-4.5 w-4.5"/>
                         <h3 className="font-semibold">Personal Goal</h3>

@@ -38,11 +38,11 @@ const Projects: React.FC<ProjectProps> = ({ className }) => {
         },
         {
             id:4,
-            title:"MyBINI",
+            title:"MyIDOL",
             description:"Lorem Ipsum dolor sit amet",
             link:"",
             github:"",
-            thumbnail:""
+            thumbnail:"/projects/pacot-portfolio.jpg"
         },
     ];
     
@@ -57,12 +57,12 @@ const Projects: React.FC<ProjectProps> = ({ className }) => {
                 />
             }
         >
-            <div className="flex flex-wrap font-inter gap-3">
+            <div className="flex md:flex-wrap max-md:flex-col font-inter gap-3">
                 {ProjectData.map(( project ) => (
                     <motion.div
                         whileHover={{ y:-3 }}  
                         key={project.id} 
-                        className="group/project min-w-70 min-h-35 relative shadow-md flex-1 rounded-lg overflow-hidden"
+                        className="group/project md:min-w-70 md:min-h-35 relative shadow-md flex-1 rounded-lg overflow-hidden"
                     >
                         <div className="
                         group-hover/project:bg-black/50
@@ -87,15 +87,15 @@ const Projects: React.FC<ProjectProps> = ({ className }) => {
                             transition-all
                             duration-300
                             ">
-                                <p className="text-lg font-semibold text-white">{project.title}</p>
-                                <p className="text-sm opacity-75 mb-2 text-white">{project.description}</p>
+                                <p className="text-lg font-semibold text-white drop-shadow-md">{project.title}</p>
+                                <p className="text-sm opacity-75 mb-2 text-white drop-shadow-md">{project.description}</p>
                                 <div className="transition-all duration-300 flex gap-2 items-center justify-evenly">
-                                    <motion.a className="border bg-white/20 flex-1 py-1 rounded-sm text-center text-xs text-white" 
+                                    <motion.a className="border bg-white/20 hover:bg-black/40 transition-all duration-300 flex-1 py-1 rounded-sm text-center text-xs text-white" 
                                     href={project.github} 
                                     target="_blank">
                                         Github
                                     </motion.a>
-                                    <motion.a className="border bg-white/20 flex-1 py-1 rounded-sm justify-center text-xs flex items-center gap-1 text-white" 
+                                    <motion.a className="border bg-white/20 hover:bg-black/40 transition-all duration-300 flex-1 py-1 rounded-sm justify-center text-xs flex items-center gap-1 text-white" 
                                     href={project.link} 
                                     target="_blank">
                                         Visit <ArrowUpRight className="h-3 w-3"/>

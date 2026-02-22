@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                     src={imageMap[state]}
                     fill
                     alt="profile picture"
-                    className="rounded-2xl"
+                    className="rounded-lg"
                 />
             </motion.div>
             <div className="flex flex-col pt-5 space-y-5 w-full items-start max-md:items-center">
