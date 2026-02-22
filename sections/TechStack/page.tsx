@@ -1,7 +1,7 @@
 "use client"
 
 import Container from "@/component/Containers/page";
-import { Layers } from "lucide-react";
+import { Layers, Github } from "lucide-react";
 import ViewBtn from "@/component/Buttons/view";
 import { motion } from "motion/react";
 import AnimatedList from "@/component/AnimatedList";

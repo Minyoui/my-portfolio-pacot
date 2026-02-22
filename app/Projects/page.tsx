@@ -1,51 +1,83 @@
+"use client"
+
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
+import { MoveLeft, Github, ArrowUpRight } from "lucide-react";
 import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import Container from "@/component/Containers/page";
 import LogoLoop from "@/component/LogoLoop";
-import { Facebook, Instagram, Youtube } from "lucide-react";
 import Footer from "@/component/Footer";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 
 const ProjectData = [
         {
             id:1,
+            title:"Pacot Portfolio",
+            description:"A personally developed professional portfolio. Design was inspired by Sir Bryl Lim's portfolio. Development was done using Visual Studio Code.",
+            link:"https://pacot-portfolio.vercel.app/",
+            banner:"/projects/pacot-portfolio.jpg",
+            url:"pacot-portfolio.vercel.app",
+            github: "",
+            tags: [
+                { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/TypeScript.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Html 5.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Figma.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/motion.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Github />, title:"React", href:""},
+            ]
+        },
+        {
+            id:2,
             title:"Pacot Blog",
             description:"A personally developed blog website using Next.js",
             link:"https://pct-blog-orcin.vercel.app",
-            banner:"",
+            banner:"/projects/pacot-blog.jpg",
             url:"pct-blog-orcin.vercel.app",
+            github: "https://github.com/Minyoui/pct-blog",
             tags: [
-                { node: <Facebook />, title:"React", href:""},
-                { node: <Instagram />, title:"React", href:""},
-                { node: <Youtube />, title:"React", href:""},
+                { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/TypeScript.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Html 5.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Figma.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/motion.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Github />, title:"React", href:""},
             ]
 
         },
         {
-            id:2,
+            id:3,
             title:"Maison`D",
-            description:"Lorem Ipsum dolor sit",
-            link:"https://maison-spa-project.vercel.app/",
-            banner:"",
+            description:"A modern, luxury spa website typically developed and designed for a local spa business. It offers seamless booking process for users who are looking for a serene experience.",
+            link:"https://maison-spa-project.vercel.app",
+            banner:"/projects/maison-d.jpg",
             url:"maison-spa-project.vercel.app",
+            github: "",
             tags: [
-                { node: <Facebook />, title:"React", href:""},
-                { node: <Instagram />, title:"React", href:""},
-                { node: <Youtube />, title:"React", href:""},
+                { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/TypeScript.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Html 5.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Figma.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/motion.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/MongoDB.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Github />, title:"React", href:""},
             ]
+
         },
         {
-            id:3,
-            title:"MyBINI",
-            description:"Lorem Ipsum dolor sit amet",
+            id:4,
+            title:"ParSafe: A Smart Parcel Receiver",
+            description:"A modern smart parcel receiver that accepts inbound parcels from different couriers. This device was built and developed for research and consists of three members. I, Evane Pacot was assigned to design and construct the entire chassis and framework of the device. The material of the shell consists of wood and plastic. The design was done using a software application (SketchUp) in order to produce a 3D model.",
             link:"",
             banner:"",
-            url:"",
+            url:"Hardware",
+            github: "",
             tags: [
-                { node: <Facebook />, title:"React", href:""},
-                { node: <Instagram />, title:"React", href:""},
-                { node: <Youtube />, title:"React", href:""},
+                
             ]
         },
     ];
@@ -67,8 +99,37 @@ const Projects = () => {
                         key={project.id}
                         className="group"
                     >
-                        <div className="flex flex-col space-y-2">
-                            <h1 className="text-2xl font-bold">{project.title}</h1>
+                        <div className="flex flex-col space-y-4">
+                            <div className="relative w-full min-h-80">
+                                <Image 
+                                    src={project.banner}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover rounded-lg"
+                                />
+                            </div>
+
+                            <div className="flex items-center justify-between">
+                                <h1 className="text-2xl md:text-3xl font-bold">{project.title}</h1>
+                                <div className="flex items-center gap-2">
+                                    <motion.a 
+                                        href={project.github} 
+                                        target="_blank" 
+                                        className="shadow-md p-2 rounded-lg"
+                                        whileHover={{ scale:1.1 }}
+                                    >
+                                        <Github />
+                                    </motion.a>
+                                    <motion.a 
+                                        href={project.link} 
+                                        target="_blank" 
+                                        className="shadow-md p-2 rounded-lg"
+                                        whileHover={{ scale:1.1 }}
+                                    >
+                                        <ArrowUpRight />
+                                    </motion.a>
+                                </div>
+                            </div>
                             <div className="dark:bg-black bg-gray-200 w-fit p-2 rounded-sm">
                                 <p className="font-mono text-xs">{project.url}</p>
                             </div>
