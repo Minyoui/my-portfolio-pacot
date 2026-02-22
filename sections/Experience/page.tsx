@@ -9,7 +9,7 @@ const ExperienceData = [
     {
         id:1,
         role:"Frontend Developer",
-        description:"Freelance",
+        description:"Upwork Freelance",
         year:2025,
         present:true
     },

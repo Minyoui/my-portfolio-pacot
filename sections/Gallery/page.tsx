@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 
 const Images = [
   "/gallery/photo-1.jfif",
+  "/gallery/photo-11.png",
   "/gallery/photo-2.jfif",
   "/gallery/photo-3.jfif",
   "/gallery/photo-4.jfif",
@@ -16,7 +17,6 @@ const Images = [
   "/gallery/photo-8.jfif",
   "/gallery/photo-9.jfif",
   "/gallery/photo-10.jpg",
-  "/gallery/photo-11.png",
 ];
 
 const Gallery = ({ className }: { className?: string }) => {
