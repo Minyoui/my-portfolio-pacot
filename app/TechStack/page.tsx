@@ -13,27 +13,38 @@ const StackData = {
         {  tech:"TypeScript", icon:"/icons/TypeScript.png" },
         {  tech:"React", icon:"/icons/React.svg" },
         {  tech:"Next.js", icon:"/icons/next-js.svg" },
-        {  tech:"SCSS", icon:"" },
-        {  tech:"Vite", icon:"" },
-        {  tech:"Motion", icon:"" },
-        {  tech:"Tailwind", icon:"" },
+        {  tech:"Vite", icon:"/icons/Vite.svg" },
+        {  tech:"HTML5", icon:"/icons/Html 5.svg" },
+        {  tech:"CSS3", icon:"/icons/CSS3.svg" },
+        {  tech:"SCSS", icon:"/icons/Sass.svg" },
+        {  tech:"Tailwind", icon:"/icons/Tailwind CSS.svg" },
+        {  tech:"Motion", icon:"/icons/motion.png" },
     ],
 
     Backend: [
         {  tech:"Firebase", icon:"/icons/Firebase.svg" },
         {  tech:"MongoDB", icon:"/icons/MongoDB.png" },
-        {  tech:"Node.js", icon:"" },
+        {  tech:"Node.js", icon:"/icons/Nodejs.png" },
     ],
 
     DevTools: [
         {  tech:"Git", icon:"/icons/Git.png" },
         {  tech:"Github", icon:"/icons/GitHub.svg" },
         {  tech:"VS Code", icon:"/icons/Visual Studio.svg" },
-        {  tech:"Adobe Photoshop", icon:"" },
-        {  tech:"Adobe Premiere Pro", icon:"" },
-        {  tech:"CapCut", icon:"" },
-        {  tech:"Figma", icon:"" },
-        {  tech:"Canva", icon:"" },
+        {  tech:"Figma", icon:"/icons/Figma.svg" },
+        {  tech:"Canva", icon:"/icons/Canva.svg" },
+        {  tech:"Adobe Photoshop", icon:"/icons/Adobe Photoshop.svg" },
+    ],
+
+    AI_Tools: [
+        {  tech:"ChatGPT", icon:"/icons/chatgpt.png"},
+        {  tech:"Claude", icon:"/icons/Claude Ai.png"},
+        {  tech:"Gemini", icon:"/icons/Gemini Ai.png"},
+    ],
+
+    Others: [
+        {  tech:"Adobe Premiere Pro", icon:"/icons/Adobe Premiere.png" },
+        {  tech:"CapCut", icon:"/icons/capcut.jpg" },
     ]
 };
 
@@ -72,7 +83,7 @@ const TechStack = () => {
                     </ul>
                 </div>
             ))}
-            <Footer className="pt-10 border-t"/>
+            {/* <Footer className="pt-10 border-t"/> */}
         </main>
     );
 };

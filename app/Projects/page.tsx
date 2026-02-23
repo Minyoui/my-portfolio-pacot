@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { MoveLeft, Github, ArrowUpRight } from "lucide-react";
+import { MoveLeft, Github, ArrowUpRight, Dot } from "lucide-react";
 import { AnimatedThemeToggler } from "@/component/ThemeToggler/page";
 import Container from "@/component/Containers/page";
 import LogoLoop from "@/component/LogoLoop";
@@ -77,7 +77,7 @@ const ProjectData = [
             url:"Hardware",
             github: "",
             tags: [
-                
+                { node: <Dot /> }
             ]
         },
     ];
