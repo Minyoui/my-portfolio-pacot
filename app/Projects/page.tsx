@@ -18,7 +18,8 @@ const ProjectData = [
             link:"https://pacot-portfolio.vercel.app/",
             banner:"/projects/pacot-portfolio.jpg",
             url:"pacot-portfolio.vercel.app",
-            github: "",
+            github: "https://github.com/Minyoui/my-portfolio-pacot",
+            disabled: false,
             tags: [
                 { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
                 { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
@@ -37,6 +38,7 @@ const ProjectData = [
             banner:"/projects/pacot-blog.jpg",
             url:"pct-blog-orcin.vercel.app",
             github: "https://github.com/Minyoui/pct-blog",
+            disabled: false,
             tags: [
                 { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
                 { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
@@ -55,7 +57,8 @@ const ProjectData = [
             link:"https://maison-spa-project.vercel.app",
             banner:"/projects/maison-d.jpg",
             url:"maison-spa-project.vercel.app",
-            github: "",
+            github: "https://github.com/Minyoui/maison-spa",
+            disabled: false,
             tags: [
                 { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
                 { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
@@ -70,12 +73,34 @@ const ProjectData = [
         },
         {
             id:4,
+            title:"Research Library",
+            description:"A modern online institute research library. Currently under development, its purpose is for self-learning and development practice. It is built using Next.js",
+            link:"https://research-database-seven.vercel.app/",
+            banner:"/projects/research-library.jpg",
+            url:"research-database-seven.vercel.app",
+            github: "https://github.com/Minyoui/research-database",
+            disabled: false,
+            tags: [
+                { node: <Image src="/icons/next-js.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Tailwind CSS.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/TypeScript.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Html 5.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Figma.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/motion.png" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Image src="/icons/Firebase.svg" width="30" height="30" alt="nextjs"/>, title:"React", href:""},
+                { node: <Github />, title:"React", href:""},
+            ]
+
+        },
+        {
+            id:5,
             title:"ParSafe: A Smart Parcel Receiver",
             description:"A modern smart parcel receiver that accepts inbound parcels from different couriers. This device was built and developed for research and consists of three members. I, Evane Pacot was assigned to design and construct the entire chassis and framework of the device. The material of the shell consists of wood and plastic. The design was done using a software application (SketchUp) in order to produce a 3D model.",
             link:"",
             banner:"",
             url:"Hardware",
             github: "",
+            disabled: true,
             tags: [
                 { node: <Dot /> }
             ]
@@ -111,7 +136,7 @@ const Projects = () => {
 
                             <div className="flex items-center justify-between">
                                 <h1 className="text-2xl md:text-3xl font-bold">{project.title}</h1>
-                                <div className="flex items-center gap-2">
+                                <div className={`flex items-center gap-2 ${project.disabled? "hidden" : ""}`}>
                                     <motion.a 
                                         href={project.github} 
                                         target="_blank" 

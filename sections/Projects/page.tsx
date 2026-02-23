@@ -38,11 +38,11 @@ const Projects: React.FC<ProjectProps> = ({ className }) => {
         },
         {
             id:4,
-            title:"MyIDOL",
-            description:"Lorem Ipsum dolor sit amet",
-            link:"",
-            github:"",
-            thumbnail:"/projects/pacot-portfolio.jpg"
+            title:"Research Library",
+            description:"A modern online institute research library",
+            link:"https://research-database-seven.vercel.app/",
+            github:"https://github.com/Minyoui/research-database",
+            thumbnail:"/projects/research-library.jpg"
         },
     ];
     
